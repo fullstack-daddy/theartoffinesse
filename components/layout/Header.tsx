@@ -21,7 +21,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-gold/30 bg-offwhite">
+      <header className="md:sticky top-0 z-50 border-b border-gold/30 bg-offwhite">
         <nav className="max-w-7xl mx-auto px-6 lg:px-12 h-20 md:h-28 flex items-center justify-between">
           {/* Left side - empty on mobile, left nav on desktop */}
           <div className="hidden md:flex items-center gap-8">
