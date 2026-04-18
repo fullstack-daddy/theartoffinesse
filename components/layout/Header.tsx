@@ -65,7 +65,7 @@ export default function Header() {
               ))}
               <Link
                 href="/book-us"
-                className="px-6 py-2.5 bg-magenta text-white font-sans font-semibold text-sm rounded-md hover:opacity-90 transition-all active:scale-95"
+                className="px-6 py-2.5 bg-magenta text-white font-sans text-center font-semibold text-sm rounded-md hover:opacity-90 transition-all active:scale-95"
               >
                 Book Now
               </Link>
@@ -105,7 +105,7 @@ export default function Header() {
             <div className="pt-4 border-t border-gold/20">
               <Link
                 href="/book-us"
-                className="block w-full py-4 bg-magenta text-white font-sans font-semibold text-base rounded-xl hover:opacity-90 active:scale-[0.985] transition-all shadow-sm"
+                className="block w-full py-4 bg-magenta text-white font-sans text-center font-semibold text-base rounded-xl hover:opacity-90 active:scale-[0.985] transition-all shadow-sm"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Book Now
