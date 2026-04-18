@@ -4,8 +4,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import BookingModal from "@/components/modals/BookingModal";
-import { Menu, X } from "lucide-react"; // icons for mobile toggle
+import { Menu, X } from "lucide-react";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -19,15 +18,12 @@ const navigation = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [bookingModalOpen, setBookingModalOpen] = useState(false);
-
-  const closeModal = () => setBookingModalOpen(false);
 
   return (
     <>
       <header className="sticky top-0 z-50 border-b border-gold/30 bg-offwhite">
-        <nav className="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
-          {/* Left Navigation (desktop) */}
+        <nav className="max-w-7xl mx-auto px-6 lg:px-12 h-28 flex items-center justify-between">
+          {/* Left Navigation (desktop only) */}
           <div className="hidden md:flex items-center gap-8">
             {navigation.slice(0, 4).map((item) => (
               <Link
@@ -43,19 +39,19 @@ export default function Header() {
           {/* Logo Center */}
           <Link
             href="/"
-            className="flex-shrink-0 hover:opacity-80 transition-opacity"
+            className="flex-shrink-0 hover:opacity-80 transition-opacity mx-auto md:mx-0"
           >
             <Image
               src="/logos/primary-logo.png"
               alt="The Art of Finesse - Luxury Event Planning"
-              width={180}
-              height={60}
+              width={520}
+              height={96}
               priority
-              className="h-12 w-auto object-contain filter brightness-125"
+              className="h-40 w-auto object-contain filter brightness-125"
             />
           </Link>
 
-          {/* Right Navigation + CTA (desktop) */}
+          {/* Right Navigation + CTA (desktop only) */}
           <div className="hidden md:flex items-center gap-8">
             {navigation.slice(3).map((item) => (
               <Link
@@ -74,7 +70,7 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Mobile Hamburger */}
+          {/* Hamburger (mobile only) */}
           <button
             className="md:hidden text-charcoal hover:text-teal transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -86,7 +82,7 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-offwhite border-t border-gold/30 px-6 py-4 space-y-4">
+          <div className="md:hidden bg-offwhite border-t border-gold/30 px-6 py-6 space-y-4 text-center">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -99,7 +95,7 @@ export default function Header() {
             ))}
             <Link
               href="/book-us"
-              className="block w-full text-center px-6 py-3 bg-magenta text-white font-sans font-semibold rounded-md hover:opacity-90 transition-opacity"
+              className="block w-full px-6 py-3 bg-magenta text-white font-sans font-semibold rounded-md hover:opacity-90 transition-opacity"
               onClick={() => setMobileMenuOpen(false)}
             >
               Book Now
@@ -107,8 +103,6 @@ export default function Header() {
           </div>
         )}
       </header>
-
-      <BookingModal isOpen={bookingModalOpen} onClose={closeModal} />
     </>
   );
 }
