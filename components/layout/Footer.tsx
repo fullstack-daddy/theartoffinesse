@@ -77,7 +77,7 @@ export default function Footer() {
               ))}
             </div>
             <p className="text-sm text-off-white/70 mt-4">
-              hello@artoffinesse.com
+              info@theartoffinesse.com
             </p>
           </div>
         </div>
