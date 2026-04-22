@@ -74,7 +74,7 @@ export default function Portfolio() {
       <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-charcoal via-charcoal to-charcoal/90">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex justify-center mb-6 animate-fade-up">
-            <Monogram size={80} color="white" />
+            <Monogram size={80} />
           </div>
           <h1 className="text-5xl md:text-7xl font-playfair font-bold text-white mb-6 animate-fade-up stagger-1 text-balance">
             Our Portfolio of Excellence

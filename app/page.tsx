@@ -9,7 +9,7 @@ import Monogram from "@/public/logos/secondary-logo.png";
 
 const highlights = [
   {
-    number: "500+",
+    number: "Multiple",
     label: "Events Created",
     description:
       "Countless celebrations brought to life with elegance and precision",

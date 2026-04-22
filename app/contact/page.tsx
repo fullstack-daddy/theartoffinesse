@@ -25,7 +25,8 @@ export default function ContactPage() {
             Get in Touch
           </h1>
           <p className="text-xl text-off-white/80 font-cormorant max-w-2xl mx-auto">
-            Let&apos;s discuss how we can create something extraordinary together
+            Let&apos;s discuss how we can create something extraordinary
+            together
           </p>
         </div>
       </section>
@@ -50,7 +51,7 @@ export default function ContactPage() {
                   href="mailto:hello@artoffinesse.com"
                   className="text-white font-sans hover:text-gold transition-colors"
                 >
-                  hello@artoffinesse.com
+                  info@theartoffinesse.com
                 </a>
               </div>
 
@@ -62,7 +63,7 @@ export default function ContactPage() {
                   href="tel:+1234567890"
                   className="text-white font-sans hover:text-gold transition-colors"
                 >
-                  +1 (234) 567-8900
+                  +1 972-885-7833
                 </a>
               </div>
 
@@ -71,8 +72,10 @@ export default function ContactPage() {
                   Address
                 </h3>
                 <p className="text-white/90 font-sans">
-                  123 Elegant Avenue<br />
-                  Metropolitan City, ST 12345<br />
+                  123 Elegant Avenue
+                  <br />
+                  Metropolitan City, ST 12345
+                  <br />
                   United States
                 </p>
               </div>
@@ -82,8 +85,10 @@ export default function ContactPage() {
                   Hours
                 </h3>
                 <p className="text-white/90 font-sans">
-                  Monday – Friday: 9 AM – 6 PM<br />
-                  Saturday: 10 AM – 4 PM<br />
+                  Monday – Friday: 9 AM – 6 PM
+                  <br />
+                  Saturday: 10 AM – 4 PM
+                  <br />
                   Sunday: By Appointment
                 </p>
               </div>
@@ -96,9 +101,9 @@ export default function ContactPage() {
               </p>
               <div className="flex gap-4">
                 {[
-                  { name: 'Instagram', url: 'https://instagram.com' },
-                  { name: 'Pinterest', url: 'https://pinterest.com' },
-                  { name: 'TikTok', url: 'https://tiktok.com' },
+                  { name: "Instagram", url: "https://instagram.com" },
+                  { name: "Pinterest", url: "https://pinterest.com" },
+                  { name: "TikTok", url: "https://tiktok.com" },
                 ].map((social) => (
                   <a
                     key={social.name}
@@ -139,7 +144,8 @@ export default function ContactPage() {
               Visit Our Studio
             </h2>
             <p className="text-lg text-charcoal/70 font-sans max-w-2xl mx-auto">
-              Located in the heart of the city, our studio is ready to welcome you
+              Located in the heart of the city, our studio is ready to welcome
+              you
             </p>
           </div>
           <MapComponent />
@@ -154,28 +160,28 @@ export default function ContactPage() {
           <div className="space-y-6">
             {[
               {
-                q: 'How far in advance should I book?',
-                a: 'We recommend booking 6-12 months in advance for weddings and major events. However, we work with shorter timelines when possible.',
+                q: "How far in advance should I book?",
+                a: "We recommend booking 6-12 months in advance for weddings and major events. However, we work with shorter timelines when possible.",
               },
               {
-                q: 'What are your service fees?',
-                a: 'Our fees vary based on event scope, size, and complexity. We offer customized packages to fit different budgets. Please contact us for specific pricing.',
+                q: "What are your service fees?",
+                a: "Our fees vary based on event scope, size, and complexity. We offer customized packages to fit different budgets. Please contact us for specific pricing.",
               },
               {
-                q: 'Do you work with destination events?',
-                a: 'Absolutely! We have extensive experience coordinating events across multiple locations and time zones. We handle all logistics and local partnerships.',
+                q: "Do you work with destination events?",
+                a: "Absolutely! We have extensive experience coordinating events across multiple locations and time zones. We handle all logistics and local partnerships.",
               },
               {
-                q: 'Can you work with my existing vendor list?',
-                a: 'Yes, we can coordinate with vendors you\'ve already selected. We can also introduce you to our curated network of trusted partners.',
+                q: "Can you work with my existing vendor list?",
+                a: "Yes, we can coordinate with vendors you've already selected. We can also introduce you to our curated network of trusted partners.",
               },
               {
-                q: 'What if I have specific dietary or accessibility needs?',
-                a: 'We take all guest needs seriously. We coordinate with vendors to accommodate dietary restrictions, accessibility requirements, and special requests.',
+                q: "What if I have specific dietary or accessibility needs?",
+                a: "We take all guest needs seriously. We coordinate with vendors to accommodate dietary restrictions, accessibility requirements, and special requests.",
               },
               {
-                q: 'How do you handle last-minute changes?',
-                a: 'Our day-of coordination team is trained to handle unexpected changes gracefully. We maintain flexibility while keeping your vision intact.',
+                q: "How do you handle last-minute changes?",
+                a: "Our day-of coordination team is trained to handle unexpected changes gracefully. We maintain flexibility while keeping your vision intact.",
               },
             ].map((item, index) => (
               <details
@@ -197,5 +203,5 @@ export default function ContactPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

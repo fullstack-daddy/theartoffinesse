@@ -641,7 +641,7 @@ export default function BookUsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 md:divide-x md:divide-gold/20">
             {[
               {
-                number: "500+",
+                number: "Multiple",
                 label: "Events Created",
                 sub: "Celebrations brought to life",
               },
