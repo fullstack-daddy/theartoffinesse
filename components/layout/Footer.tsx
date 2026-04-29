@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import Monogram from '@/components/branding/Monogram'
-
+import { FaInstagram, FaFacebookF, FaTiktok } from 'react-icons/fa'
+ 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
@@ -60,9 +60,21 @@ export default function Footer() {
             </h3>
             <div className="flex gap-4">
               {[
-                { name: "Instagram", url: "https://instagram.com" },
-                { name: "Pinterest", url: "https://pinterest.com" },
-                { name: "TikTok", url: "https://tiktok.com" },
+                {
+                  name: "Instagram",
+                  url: "https://www.instagram.com/theartoffinesse?igsh=M3FibDQ4cnY3ZHpu",
+                  icon: <FaInstagram />,
+                },
+                {
+                  name: "Facebook",
+                  url: "https://www.facebook.com/share/1HuDdbnobX/?mibextid=wwXIfr",
+                  icon: <FaFacebookF />,
+                },
+                {
+                  name: "TikTok",
+                  url: "https://www.tiktok.com/@artoffinesse?_r=1&_t=ZT-95kuf0QeQjV",
+                  icon: <FaTiktok />,
+                },
               ].map((social) => (
                 <a
                   key={social.name}
@@ -72,7 +84,7 @@ export default function Footer() {
                   className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center hover:bg-magenta hover:text-charcoal transition-all"
                   aria-label={social.name}
                 >
-                  <span className="text-xs font-bold">{social.name[0]}</span>
+                  {social.icon}
                 </a>
               ))}
             </div>

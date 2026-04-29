@@ -71,14 +71,6 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="space-y-6">
               <p className="text-charcoal/70 font-sans leading-relaxed">
-                Here at The Art of Finesse, we offer party planning and styling
-                for your events. In addition, we have custom party packages
-                already created for your loved ones, however we are also
-                available for other custom parties not listed in our party
-                packages. We also create a one of a kind dessert table for your
-                events.
-              </p>
-              <p className="text-charcoal/70 font-sans leading-relaxed">
                 At The Art of Finesse, we specialize in organizing exceptional
                 events, both locally and internationally. Our approach to event
                 planning is distinguished by its personalized and bespoke

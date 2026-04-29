@@ -132,7 +132,7 @@ export default function TermsOfServicePage() {
                   {
                     title: "Payment Methods",
                     content:
-                      "We accept bank transfers, credit cards, and certified checks. All fees are quoted in USD unless otherwise specified.",
+                      "We accept bank transfers and certified checks. All fees are quoted in USD unless otherwise specified.",
                   },
                 ].map((item, index) => (
                   <div
@@ -215,6 +215,7 @@ export default function TermsOfServicePage() {
                   "Secure necessary permits or licenses required for your venue or event",
                   "Communicate any changes or concerns promptly",
                   "Adhere to payment schedules as outlined in your agreement",
+                  "Provide a hot meal for all contracted vendor staff"
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <span className="text-gold mt-1.5">◆</span>
@@ -361,7 +362,7 @@ export default function TermsOfServicePage() {
                     href="mailto:legal@artoffinesse.com"
                     className="hover:text-teal transition-colors"
                   >
-                    legal@artoffinesse.com
+                    info@theartoffinesse.com
                   </a>
                 </div>
                 <div className="flex items-center gap-3 text-charcoal/70 font-sans">
@@ -370,18 +371,8 @@ export default function TermsOfServicePage() {
                     href="tel:+1234567890"
                     className="hover:text-teal transition-colors"
                   >
-                    (555) 123-4567
+                    (972) 885-7833
                   </a>
-                </div>
-                <div className="flex items-start gap-3 text-charcoal/70 font-sans">
-                  <span className="text-teal font-bold">✧</span>
-                  <address className="not-italic">
-                    The Art of Finesse
-                    <br />
-                    123 Luxury Lane, Suite 100
-                    <br />
-                    Dallas, Texas 75201
-                  </address>
                 </div>
               </div>
             </div>

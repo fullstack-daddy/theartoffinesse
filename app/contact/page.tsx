@@ -60,36 +60,18 @@ export default function ContactPage() {
                   Phone
                 </h3>
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+19728857833"
                   className="text-white font-sans hover:text-gold transition-colors"
                 >
                   +1 972-885-7833
                 </a>
               </div>
-
-              <div>
-                <h3 className="text-sm font-sans font-semibold tracking-widest text-gold mb-2 uppercase">
-                  Address
-                </h3>
-                <p className="text-white/90 font-sans">
-                  123 Elegant Avenue
-                  <br />
-                  Metropolitan City, ST 12345
-                  <br />
-                  United States
-                </p>
-              </div>
-
               <div>
                 <h3 className="text-sm font-sans font-semibold tracking-widest text-gold mb-2 uppercase">
                   Hours
                 </h3>
                 <p className="text-white/90 font-sans">
-                  Monday – Friday: 9 AM – 6 PM
-                  <br />
-                  Saturday: 10 AM – 4 PM
-                  <br />
-                  Sunday: By Appointment
+                  Monday – Friday: 9 AM – 4 PM
                 </p>
               </div>
             </div>

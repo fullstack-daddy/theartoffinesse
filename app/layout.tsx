@@ -112,47 +112,55 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html 
+    <html
       lang="en"
       className={`${montserrat.variable} ${playfair.variable} ${cormorant.variable} ${greatVibes.variable}`}
     >
       <head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=5"
+        />
         <meta name="theme-color" content="#006D77" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="The Art of Finesse" />
-        
+
         {/* Preconnect to Google Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'LocalBusiness',
-              name: 'The Art of Finesse',
-              description: 'Premium luxury event planning and coordination',
-              url: 'https://theartoffinesse.com',
-              logo: 'https://theartoffinesse.com/logos/primary-logo.png',
-              image: 'https://theartoffinesse.com/logos/primary-logo.png',
-              address: {
-                '@type': 'PostalAddress',
-                streetAddress: '123 Elegant Avenue',
-                addressLocality: 'Metropolitan City',
-                addressRegion: 'ST',
-                postalCode: '12345',
-                addressCountry: 'US',
-              },
-              telephone: '+1-234-567-8900',
-              email: 'hello@artoffinesse.com',
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "The Art of Finesse",
+              description: "Premium luxury event planning and coordination",
+              url: "https://theartoffinesse.com",
+              logo: "https://theartoffinesse.com/logos/primary-logo.png",
+              image: "https://theartoffinesse.com/logos/primary-logo.png",
+              // address: {
+              //   '@type': 'PostalAddress',
+              //   streetAddress: '123 Elegant Avenue',
+              //   addressLocality: 'Metropolitan City',
+              //   addressRegion: 'ST',
+              //   postalCode: '12345',
+              //   addressCountry: 'US',
+              // },
+              telephone: "+1-234-567-8900",
+              email: "info@theartoffinesse.com",
               sameAs: [
-                'https://www.instagram.com/artoffinesse',
-                'https://www.facebook.com/artoffinesse',
+                "https://www.instagram.com/theartoffinesse",
+                "https://www.facebook.com/artoffinesse",
+                "https://www.tiktok.com/@artoffinesse",
               ],
             }),
           }}
@@ -163,16 +171,23 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Organization',
-              name: 'The Art of Finesse',
-              url: 'https://theartoffinesse.com',
-              logo: 'https://theartoffinesse.com/logos/primary-logo.png',
-              description: 'Luxury event planning and coordination services for weddings, corporate events, and destination celebrations',
-              knowsAbout: ['Wedding Planning', 'Corporate Event Planning', 'Event Coordination', 'Event Design', 'Luxury Services'],
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "The Art of Finesse",
+              url: "https://theartoffinesse.com",
+              logo: "https://theartoffinesse.com/logos/primary-logo.png",
+              description:
+                "Luxury event planning and coordination services for weddings, corporate events, and destination celebrations",
+              knowsAbout: [
+                "Wedding Planning",
+                "Corporate Event Planning",
+                "Event Coordination",
+                "Event Design",
+                "Luxury Services",
+              ],
               areaServed: {
-                '@type': 'Country',
-                name: 'United States',
+                "@type": "Country",
+                name: "United States",
               },
             }),
           }}
@@ -180,12 +195,10 @@ export default function RootLayout({
       </head>
       <body className="bg-off-white text-charcoal font-sans antialiased">
         <Header />
-        <main>
-          {children}
-        </main>
+        <main>{children}</main>
         <Footer />
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+        {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>
-  )
+  );
 }
