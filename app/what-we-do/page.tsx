@@ -44,7 +44,7 @@ export default function WhatWeDoPage() {
         "https://res.cloudinary.com/doqtetftz/image/upload/v1777450373/venue-transformation_pa9jva.jpg",
     },
     {
-      title: "Premium Catering & Service",
+      title: "Premium Dinner Service",
       description:
         "We curate exceptional culinary experiences and coordinate seamless service. From gourmet menus to wine pairings, our catering partners deliver sophistication and excellence at every course.",
       highlights: [

@@ -582,9 +582,9 @@ export default function BookUsPage() {
                 </p>
                 <div className="flex flex-col gap-3.5">
                   {[
-                    { icon: "→", text: "+1 (123) 456-7899" },
-                    { icon: "→", text: "hello@theartoffinesse.com" },
-                    { icon: "→", text: "Mon – Fri, 9am – 6pm EST" },
+                    { icon: "→", text: "(972) 885-7833" },
+                    { icon: "→", text: "info@thetheartoffinesse.com" },
+                    { icon: "→", text: "Mon – Fri, 9am – 4pm" },
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-3">
                       <span className="text-gold/50 text-xs font-sans">
