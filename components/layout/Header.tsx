@@ -54,7 +54,7 @@ export default function Header() {
           {/* Right side - Hamburger on mobile, nav + CTA on desktop */}
           <div className="flex items-center gap-4 md:gap-8">
             <div className="hidden md:flex items-center gap-8">
-              {navigation.slice(2).map((item) => (
+              {navigation.slice(4).map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
