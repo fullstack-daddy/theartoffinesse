@@ -25,7 +25,7 @@ export default function Header() {
         <nav className="max-w-7xl mx-auto px-6 lg:px-12 h-20 md:h-28 flex items-center justify-between">
           {/* Left side - empty on mobile, left nav on desktop */}
           <div className="hidden md:flex items-center gap-8">
-            {navigation.slice(0, 3).map((item) => (
+            {navigation.slice(0, 4).map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
@@ -54,7 +54,7 @@ export default function Header() {
           {/* Right side - Hamburger on mobile, nav + CTA on desktop */}
           <div className="flex items-center gap-4 md:gap-8">
             <div className="hidden md:flex items-center gap-8">
-              {navigation.slice(3).map((item) => (
+              {navigation.slice(2).map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
