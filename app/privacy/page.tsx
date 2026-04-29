@@ -274,32 +274,22 @@ export default function PrivacyPolicyPage() {
                 <div className="flex items-center gap-3 text-charcoal/70 font-sans">
                   <span className="text-teal font-bold">✉</span>
                   <a
-                    href="mailto:privacy@artoffinesse.com"
+                    href="mailto:info@theartoffinesse.com"
                     className="hover:text-teal transition-colors"
                   >
-                    privacy@artoffinesse.com
+                    info@theartoffinesse.com
                   </a>
                 </div>
                 <div className="flex items-center gap-3 text-charcoal/70 font-sans">
                   <span className="text-teal font-bold">✆</span>
                   <a
-                    href="tel:+1234567890"
+                    href="tel:+19728857833"
                     className="hover:text-teal transition-colors"
                   >
-                    (555) 123-4567
+                    (972) 885-7833
                   </a>
                 </div>
-                <div className="flex items-start gap-3 text-charcoal/70 font-sans">
-                  <span className="text-teal font-bold">✧</span>
-                  <address className="not-italic">
-                    The Art of Finesse
-                    <br />
-                    123 Luxury Lane, Suite 100
-                    <br />
-                    Dallas, Texas 75201
-                  </address>
-                </div>
-              </div>
+                             </div>
             </div>
           </div>
         </div>

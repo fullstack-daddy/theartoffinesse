@@ -3,7 +3,6 @@ import Image from 'next/image'
 import SectionDivider from '@/components/sections/SectionDivider'
 import CTABand from '@/components/sections/CTABand'
 import Link from 'next/link'
-import Monogram from '@/components/branding/Monogram'
 
 export const metadata: Metadata = {
   title: 'Event Planning Services | The Art of Finesse',
@@ -19,34 +18,58 @@ export const metadata: Metadata = {
 export default function WhatWeDoPage() {
   const services = [
     {
-      title: 'Event Planning & Design',
+      title: "Event Planning & Design",
       description:
-        'From concept to execution, we orchestrate every element of your event with meticulous attention to detail. We handle venue selection, vendor coordination, timeline management, and creative direction—allowing you to focus on enjoying the moment.',
-      highlights: ['Concept Development', 'Vendor Selection', 'Timeline Management', 'Budget Oversight'],
-      image: '/events/event-coordination.jpg',
+        "From concept to execution, we orchestrate every element of your event with meticulous attention to detail. We handle venue selection, vendor coordination, timeline management, and creative direction—allowing you to focus on enjoying the moment.",
+      highlights: [
+        "Concept Development",
+        "Vendor Selection",
+        "Timeline Management",
+        "Budget Oversight",
+      ],
+      image:
+        "https://res.cloudinary.com/doqtetftz/image/upload/v1777468684/WhatsApp_Image_2026-04-23_at_06.50.52_l2zbkd.jpg",
     },
     {
-      title: 'Luxury Styling & Aesthetics',
+      title: "Luxury Styling & Aesthetics",
       description:
-        'Your event should reflect your unique vision and refined taste. We create bespoke design concepts, curate color palettes, source exceptional décor, and ensure every visual element tells your story with elegance and impact.',
-      highlights: ['Bespoke Design', 'Color Curation', 'Décor Sourcing', 'Visual Direction'],
-      image: '/events/venue-transformation.jpg',
+        "Your event should reflect your unique vision and refined taste. We create bespoke design concepts, curate color palettes, source exceptional décor, and ensure every visual element tells your story with elegance and impact.",
+      highlights: [
+        "Bespoke Design",
+        "Color Curation",
+        "Décor Sourcing",
+        "Visual Direction",
+      ],
+      image:
+        "https://res.cloudinary.com/doqtetftz/image/upload/v1777450373/venue-transformation_pa9jva.jpg",
     },
     {
-      title: 'Premium Catering & Service',
+      title: "Premium Catering & Service",
       description:
-        'We curate exceptional culinary experiences and coordinate seamless service. From gourmet menus to wine pairings, our catering partners deliver sophistication and excellence at every course.',
-      highlights: ['Gourmet Menus', 'Wine Pairing', 'Service Coordination', 'Dietary Accommodation'],
-      image: '/events/fine-dining.jpg',
+        "We curate exceptional culinary experiences and coordinate seamless service. From gourmet menus to wine pairings, our catering partners deliver sophistication and excellence at every course.",
+      highlights: [
+        "Gourmet Menus",
+        "Wine Pairing",
+        "Service Coordination",
+        "Dietary Accommodation",
+      ],
+      image:
+        "https://res.cloudinary.com/doqtetftz/image/upload/v1777450370/fine-dining_il3gmr.jpg",
     },
     {
-      title: 'Day-of Coordination',
+      title: "Day-of Coordination",
       description:
         "Let us manage the logistics while you savor your celebration. Our coordination team ensures flawless execution, manages vendor timing, handles every detail, and maintains the vision you've worked so hard to create.",
-      highlights: ['Vendor Management', 'Timeline Execution', 'Problem-Solving', 'Guest Experience'],
-      image: '/events/premium-florals.jpg',
+      highlights: [
+        "Vendor Management",
+        "Timeline Execution",
+        "Problem-Solving",
+        "Guest Experience",
+      ],
+      image:
+        "https://res.cloudinary.com/doqtetftz/image/upload/v1777450372/premium-florals_fjlveu.jpg",
     },
-  ]
+  ];
 
   return (
     <div>

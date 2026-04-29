@@ -514,19 +514,22 @@ const services = [
 
 const featuredEvents = [
   {
-    image: "/events/luxury-wedding.jpg",
+    image:
+      "https://res.cloudinary.com/doqtetftz/image/upload/v1777450371/luxury-wedding_wlrrzf.jpg",
     title: "Luxury Wedding",
     category: "Wedding",
     location: "New York City",
   },
   {
-    image: "/events/gala-evening.jpg",
+    image:
+      "https://res.cloudinary.com/doqtetftz/image/upload/v1777469149/gala-evening_wgj1of.png",
     title: "Corporate Gala",
     category: "Corporate",
     location: "The Plaza Hotel",
   },
   {
-    image: "/events/destination-celebration.jpg",
+    image:
+      "https://res.cloudinary.com/doqtetftz/image/upload/v1777450370/destination-celebration_xbjpog.jpg",
     title: "Destination Event",
     category: "Destination",
     location: "Amalfi Coast",
@@ -585,7 +588,7 @@ export default function Home() {
           {/* Background image */}
           <div className="absolute inset-0 z-0">
             <Image
-              src="/events/luxury-wedding.jpg"
+              src="https://res.cloudinary.com/doqtetftz/image/upload/v1777450371/luxury-wedding_wlrrzf.jpg"
               alt="Luxury Event Planning Hero"
               fill
               className="object-cover scale-[1.03]"
@@ -969,7 +972,7 @@ export default function Home() {
                 <div className="absolute -top-4 -left-4 w-full h-full border border-gold/30 pointer-events-none z-0" />
                 <div className="relative z-10 h-[480px] overflow-hidden">
                   <Image
-                    src="/events/intimate-gathering.jpg"
+                    src="https://res.cloudinary.com/doqtetftz/image/upload/v1777450370/intimate-gathering_lfk9ea.jpg"
                     alt="Premium Event Coordination"
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-700"

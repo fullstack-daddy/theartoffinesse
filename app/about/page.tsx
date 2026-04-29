@@ -29,7 +29,7 @@ export default function AboutPage() {
       <section className="grid grid-cols-1 md:grid-cols-2 min-h-screen">
         {/* Left: Teal + Brand Name */}
         <Image
-          src="/art_of_finese_about_us.jpeg"
+          src="https://res.cloudinary.com/doqtetftz/image/upload/v1777450336/art_of_finese_about_us_xtdbmi.jpg"
           alt="About Us"
           width={600}
           height={400}

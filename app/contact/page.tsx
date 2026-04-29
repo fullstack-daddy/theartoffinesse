@@ -3,6 +3,7 @@ import SectionDivider from '@/components/sections/SectionDivider'
 import BookingForm from '@/components/forms/BookingForm'
 import MapComponent from '@/components/map/MapComponent'
 import Monogram from '@/components/branding/Monogram'
+import { FaFacebookF, FaInstagram, FaTiktok } from 'react-icons/fa'
 
 export const metadata: Metadata = {
   title: 'Contact The Art of Finesse | Luxury Event Planning',
@@ -63,7 +64,7 @@ export default function ContactPage() {
                   href="tel:+19728857833"
                   className="text-white font-sans hover:text-gold transition-colors"
                 >
-                  +1 972-885-7833
+                  972-885-7833
                 </a>
               </div>
               <div>
@@ -81,24 +82,36 @@ export default function ContactPage() {
               <p className="text-xs font-sans text-gold mb-4 uppercase tracking-widest">
                 Follow
               </p>
-              <div className="flex gap-4">
-                {[
-                  { name: "Instagram", url: "https://instagram.com" },
-                  { name: "Pinterest", url: "https://pinterest.com" },
-                  { name: "TikTok", url: "https://tiktok.com" },
-                ].map((social) => (
-                  <a
-                    key={social.name}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full border border-gold hover:bg-gold hover:text-teal transition-all flex items-center justify-center"
-                    aria-label={social.name}
-                  >
-                    <span className="text-xs font-bold">{social.name[0]}</span>
-                  </a>
-                ))}
-              </div>
+               <div className="flex gap-4">
+              {[
+                {
+                  name: "Instagram",
+                  url: "https://www.instagram.com/theartoffinesse?igsh=M3FibDQ4cnY3ZHpu",
+                  icon: <FaInstagram />,
+                },
+                {
+                  name: "Facebook",
+                  url: "https://www.facebook.com/share/1HuDdbnobX/?mibextid=wwXIfr",
+                  icon: <FaFacebookF />,
+                },
+                {
+                  name: "TikTok",
+                  url: "https://www.tiktok.com/@artoffinesse?_r=1&_t=ZT-95kuf0QeQjV",
+                  icon: <FaTiktok />,
+                },
+              ].map((social) => (
+                <a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center hover:bg-magenta hover:text-charcoal transition-all"
+                  aria-label={social.name}
+                >
+                  {social.icon}
+                </a>
+              ))}
+            </div>
             </div>
           </div>
         </div>
@@ -119,7 +132,7 @@ export default function ContactPage() {
       </section>
 
       {/* Map Section */}
-      <section className="py-16 md:py-24 bg-off-white">
+      {/* <section className="py-16 md:py-24 bg-off-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-playfair font-bold text-charcoal mb-4">
@@ -132,7 +145,7 @@ export default function ContactPage() {
           </div>
           <MapComponent />
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ Section */}
       <section className="py-16 md:py-24 bg-off-white">

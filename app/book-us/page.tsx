@@ -95,7 +95,7 @@ export default function BookUsPage() {
         {/* Full-bleed background */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/events/luxury-wedding.jpg"
+            src="https://res.cloudinary.com/doqtetftz/image/upload/v1777450371/luxury-wedding_wlrrzf.jpg"
             alt="Book Your Luxury Event"
             fill
             className="object-cover scale-105"
@@ -368,7 +368,10 @@ export default function BookUsPage() {
                 </div>
               ) : (
                 /* FORM */
-                <div id="booking-form" className="border border-gold/40 bg-white/[0.03] rounded-sm p-8 md:p-12">
+                <div
+                  id="booking-form"
+                  className="border border-gold/40 bg-white/[0.03] rounded-sm p-8 md:p-12"
+                >
                   {/* Form grid */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-8 mb-8">
                     {[
