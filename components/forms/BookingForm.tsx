@@ -1,4 +1,3 @@
-// BookingForm.tsx
 "use client";
 
 import { useState } from "react";
@@ -17,24 +16,32 @@ export default function BookingForm({ onSuccess }: BookingFormProps) {
 
     try {
       const formData = new FormData(e.currentTarget);
-      const data = Object.fromEntries(formData);
 
-      // In a real app, send this to an API
-      console.log("Form submitted:", data);
+      // Send to Formspree endpoint
+      const response = await fetch("https://formspree.io/f/xnjwarod", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
 
-      setSubmitted(true);
-      e.currentTarget.reset();
+      if (response.ok) {
+        setSubmitted(true);
+        e.currentTarget.reset();
 
-      // Call onSuccess callback if provided
-      if (onSuccess) {
+        if (onSuccess) {
+          setTimeout(() => {
+            onSuccess();
+          }, 2000);
+        }
+
         setTimeout(() => {
-          onSuccess();
-        }, 2000); // Close modal after showing success message
+          setSubmitted(false);
+        }, 5000);
+      } else {
+        console.error("Formspree submission failed:", response.statusText);
       }
-
-      setTimeout(() => {
-        setSubmitted(false);
-      }, 5000);
     } catch (error) {
       console.error("Error submitting form:", error);
     } finally {
@@ -47,20 +54,10 @@ export default function BookingForm({ onSuccess }: BookingFormProps) {
     { name: "email", label: "Email Address", type: "email", required: true },
     { name: "phone", label: "Phone Number", type: "tel", required: true },
     { name: "eventType", label: "Event Type", type: "select", required: true },
-    {
-      name: "guestCount",
-      label: "Number of Guests",
-      type: "number",
-      required: false,
-    },
+    { name: "guestCount", label: "Number of Guests", type: "number" },
     { name: "date", label: "Preferred Date", type: "date", required: true },
     { name: "location", label: "Event Location", type: "text", required: true },
-    {
-      name: "budget",
-      label: "Estimated Budget",
-      type: "text",
-      required: false,
-    },
+    { name: "budget", label: "Estimated Budget", type: "text" },
   ];
 
   const eventTypes = [
@@ -79,7 +76,6 @@ export default function BookingForm({ onSuccess }: BookingFormProps) {
         </div>
       )}
 
-      {/* Main form fields in 2-column grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {fields.map((field) => (
           <div key={field.name} className="flex flex-col">
@@ -116,7 +112,6 @@ export default function BookingForm({ onSuccess }: BookingFormProps) {
         ))}
       </div>
 
-      {/* Vision textarea - full width */}
       <div className="flex flex-col">
         <label
           htmlFor="vision"
@@ -133,7 +128,6 @@ export default function BookingForm({ onSuccess }: BookingFormProps) {
         />
       </div>
 
-      {/* Submit Button */}
       <div className="pt-6">
         <button
           type="submit"
@@ -144,7 +138,6 @@ export default function BookingForm({ onSuccess }: BookingFormProps) {
         </button>
       </div>
 
-      {/* Privacy note */}
       <p className="text-xs text-charcoal/50 font-sans text-center">
         We respect your privacy. Your information will only be used to respond
         to your inquiry.

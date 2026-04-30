@@ -75,12 +75,50 @@ export default function BookUsPage() {
       return;
     }
     setLoading(true);
+    setError(false);
+
     try {
-      console.log("Booking inquiry submitted:", formData);
-      await new Promise((r) => setTimeout(r, 1300));
-      setSubmitted(true);
+      // Formspree submission
+      const response = await fetch("https://formspree.io/f/xaqvwgak", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          eventType: formData.eventType,
+          date: formData.date,
+          guests: formData.guests,
+          location: formData.location,
+          budget: formData.budget,
+          vision: formData.vision,
+          _subject: `New Booking Inquiry from ${formData.name}`,
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        // Reset form after successful submission
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          eventType: "",
+          date: "",
+          guests: "",
+          location: "",
+          budget: "",
+          vision: "",
+        });
+      } else {
+        throw new Error("Form submission failed");
+      }
     } catch (err) {
       console.error(err);
+      setError(true);
+      setTimeout(() => setError(false), 2400);
     } finally {
       setLoading(false);
     }
@@ -368,8 +406,9 @@ export default function BookUsPage() {
                 </div>
               ) : (
                 /* FORM */
-                <div
+                <form
                   id="booking-form"
+                  onSubmit={handleSubmit}
                   className="border border-gold/40 bg-white/[0.03] rounded-sm p-8 md:p-12"
                 >
                   {/* Form grid */}
@@ -436,6 +475,7 @@ export default function BookUsPage() {
                           value={formData[field.name as keyof typeof formData]}
                           onChange={handleChange}
                           placeholder={field.placeholder}
+                          required={field.required}
                           className="w-full bg-transparent border-0 border-b border-white/15 px-0 py-3 font-sans text-sm text-white placeholder:text-white/20 focus:outline-none focus:border-gold/60 transition-colors"
                         />
                       </div>
@@ -450,6 +490,7 @@ export default function BookUsPage() {
                         name="eventType"
                         value={formData.eventType}
                         onChange={handleChange}
+                        required
                         className={`w-full bg-transparent border-0 border-b border-white/15 px-0 py-3 font-sans text-sm focus:outline-none focus:border-gold/60 transition-colors cursor-pointer
                           ${formData.eventType ? "text-white" : "text-white/25"}`}
                       >
@@ -493,10 +534,7 @@ export default function BookUsPage() {
                   {/* Submit */}
                   <div className="flex flex-col sm:flex-row items-center gap-5">
                     <button
-                      type="button"
-                      onClick={
-                        handleSubmit as unknown as React.MouseEventHandler
-                      }
+                      type="submit"
                       disabled={loading}
                       className={`group relative px-12 py-4 font-sans font-semibold text-xs tracking-[0.25em] uppercase transition-all duration-300 overflow-hidden
                         ${
@@ -522,7 +560,7 @@ export default function BookUsPage() {
                       Strictly confidential. We never share your information.
                     </p>
                   </div>
-                </div>
+                </form>
               )}
             </div>
 

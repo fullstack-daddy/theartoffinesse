@@ -166,7 +166,7 @@ export default function TestimonialsPage() {
         title="Join Our Circle of Satisfied Clients"
         subtitle="Experience the difference that precision and elegance can make"
         ctaText="Book Your Event"
-        ctaLink="/contact"
+        ctaLink="/book-us"
         backgroundColor="magenta"
       />
     </div>
